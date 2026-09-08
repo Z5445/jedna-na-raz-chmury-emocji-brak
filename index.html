@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interaktywna przestrzeń instalacji artystycznej." />
+    <title>chmury emocji — start</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="gallery-page" data-title-pl="chmury emocji — start" data-title-en="emotional clouds — start">
+    <header class="gallery-header"><a class="logo" href="index.html">chmury<br /><em>emocji</em></a><nav><a class="active" href="index.html" data-i18n="nav-start">start</a><a href="o-projekcie.html" data-i18n="nav-about">o projekcie</a><a href="proces.html" data-i18n="nav-process">proces</a><a href="o-mnie.html" data-i18n="nav-me">o mnie</a></nav><div class="language-switch" aria-label="Wybór języka"><button type="button" data-lang="pl">PL</button><span>/</span><button type="button" data-lang="en">EN</button></div></header>
+    <main class="gallery-main">
+      <section class="viewport" id="viewport" aria-label="Interaktywna plansza instalacji">
+        <div class="canvas" id="canvas">
+          <div class="canvas-line vertical"></div><div class="canvas-line horizontal"></div>
+          <button class="work w01" data-work="1" style="--x:650px;--y:430px;--w:168px;--h:238px"><img src="public/assets/works/01.png" alt="Grafika 1" /><span>01</span></button>
+          <button class="work w02" data-work="2" style="--x:875px;--y:480px;--w:200px;--h:280px"><img src="public/assets/works/02.png" alt="Grafika 2" /><span>02</span></button>
+          <button class="work w03" data-work="3" style="--x:1140px;--y:550px;--w:180px;--h:260px"><img src="public/assets/works/03.png" alt="Grafika 3" /><span>03</span></button>
+          <button class="work w04" data-work="4" style="--x:1380px;--y:370px;--w:119px;--h:168px"><img src="public/assets/works/04.png" alt="Grafika 4" /><span>04</span></button>
+          <button class="work w05" data-work="5" style="--x:1510px;--y:590px;--w:119px;--h:168px"><img src="public/assets/works/05.png" alt="Grafika 5" /><span>05</span></button>
+          <button class="work w12" data-work="12" style="--x:690px;--y:1240px;--w:280px;--h:396px"><img src="public/assets/works/12.png" alt="Grafika 12" /><span>12</span></button>
+          <button class="work w13" data-work="13" style="--x:1040px;--y:1400px;--w:180px;--h:254px"><img src="public/assets/works/13.png" alt="Grafika 13" /><span>13</span></button>
+          <button class="work w14" data-work="14" style="--x:1300px;--y:1230px;--w:100px;--h:141px"><img src="public/assets/works/14.png" alt="Grafika 14" /><span>14</span></button>
+          <button class="work w15" data-work="15" style="--x:1480px;--y:1460px;--w:84px;--h:119px"><img src="public/assets/works/15.png" alt="Grafika 15" /><span>15</span></button>
+          <button class="work w16" data-work="16" style="--x:1640px;--y:1220px;--w:104px;--h:144px"><img src="public/assets/works/16.png" alt="Grafika 16" /><span>16</span></button>
+          <button class="work w17" data-work="17" style="--x:1830px;--y:1390px;--w:180px;--h:260px"><img src="public/assets/works/17.png" alt="Grafika 17" /><span>17</span></button>
+          <button class="work w18" data-work="18" style="--x:2080px;--y:1190px;--w:180px;--h:260px"><img src="public/assets/works/18.png" alt="Grafika 18" /><span>18</span></button>
+        </div>
+      </section>
+    </main>
+    <dialog class="work-modal" id="workModal"><button class="modal-close" aria-label="Zamknij" data-i18n-aria="close">×</button><div class="modal-work"><img id="modalImage" src="" alt="" /><div class="modal-pager"><button id="previousWork" aria-label="Poprzednia praca">‹</button><span id="pageDots"></span><button id="nextWork" aria-label="Następna praca">›</button></div></div><div class="modal-info"><p id="modalNumber" class="mono">grafika 01 / 18</p><h1 id="modalTitle" data-i18n="modal-artwork">Grafika</h1><div class="modal-description"><p id="modalText" data-i18n="modal-text">Opis pracy do uzupełnienia.</p><p id="modalDetails" data-i18n="modal-details"></p></div><p class="modal-technique" id="modalTechnique" data-i18n="modal-technique"></p></div></dialog>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
