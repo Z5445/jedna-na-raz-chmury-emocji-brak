@@ -1,0 +1,174 @@
+/* Static presentation board: five works kept at their original image ratios. */
+:root { --gallery-header-height: 86px; }
+
+.gallery-page { overflow: hidden; }
+
+.gallery-header .logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  text-decoration: none;
+}
+
+.gallery-header .logo .plutchik-logo-icon {
+  display: block !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px;
+  object-fit: contain;
+}
+
+.gallery-header .logo .plutchik-logo-label {
+  display: block;
+  line-height: .8;
+}
+
+#canvas.static-five-board {
+  position: relative !important;
+  width: 100% !important;
+  height: calc(100svh - var(--gallery-header-height)) !important;
+  min-height: 580px !important;
+  overflow: hidden !important;
+  transform: none !important;
+  touch-action: auto !important;
+  cursor: default !important;
+}
+
+#canvas.static-five-board .work {
+  position: absolute !important;
+  display: block !important;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+  animation: none !important;
+  cursor: pointer !important;
+}
+
+#canvas.static-five-board .work img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+#canvas.static-five-board .work:hover { filter: none !important; }
+
+#canvas.static-five-board .work:not(.w01):not(.w02):not(.w03):not(.w04):not(.w05) {
+  display: none !important;
+}
+
+#canvas.static-five-board .w01 { left: 5% !important; top: 10% !important; width: clamp(105px, 15vw, 190px) !important; }
+#canvas.static-five-board .w02 { left: 27% !important; top: 7% !important; width: clamp(125px, 18vw, 230px) !important; }
+#canvas.static-five-board .w03 { left: 53% !important; top: 45% !important; width: clamp(85px, 10vw, 140px) !important; }
+#canvas.static-five-board .w04 { left: 74% !important; top: 9% !important; width: clamp(110px, 14vw, 180px) !important; }
+#canvas.static-five-board .w05 { left: 75% !important; top: 54% !important; width: clamp(100px, 12vw, 160px) !important; }
+
+/* The previous modal remains in the document but is superseded by the non-navigable version below. */
+#workModal { display: none !important; }
+
+#staticWorkModal {
+  width: min(1100px, calc(100vw - 32px));
+  max-width: none;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  color: #111;
+}
+
+#staticWorkModal::backdrop { background: rgba(0, 0, 0, .58); }
+
+.static-modal-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  min-height: min(72vh, 720px);
+}
+
+.static-modal-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: #fbfaf7;
+}
+
+.static-modal-art img {
+  display: block;
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+}
+
+.static-modal-info {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 72px 64px 48px;
+}
+
+.static-modal-close {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  right: 22px;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font: 400 34px/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.static-modal-kicker {
+  margin: 18px 0 26px;
+  color: #1026db;
+  font: 12px/1.2 monospace;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.static-modal-title {
+  margin: 0 0 52px;
+  color: #1026db;
+  font-size: clamp(42px, 5.1vw, 72px);
+  line-height: .94;
+  letter-spacing: -.075em;
+}
+
+.static-modal-description,
+.static-modal-source,
+.static-modal-technique {
+  margin: 0;
+  color: #1026db;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.static-modal-source { margin-top: 26px; }
+.static-modal-technique { margin-top: auto; padding-top: 48px; font-size: 15px; }
+
+@media (max-width: 680px) {
+  :root { --gallery-header-height: 76px; }
+  .gallery-header .logo .plutchik-logo-icon { width: 28px !important; height: 28px !important; min-width: 28px; }
+  #canvas.static-five-board { min-height: calc(100svh - var(--gallery-header-height)) !important; }
+  #canvas.static-five-board .w01 { left: 4% !important; top: 8% !important; width: 25vw !important; }
+  #canvas.static-five-board .w02 { left: 34% !important; top: 6% !important; width: 30vw !important; }
+  #canvas.static-five-board .w03 { left: 68% !important; top: 38% !important; width: 18vw !important; }
+  #canvas.static-five-board .w04 { left: 5% !important; top: 50% !important; width: 23vw !important; }
+  #canvas.static-five-board .w05 { left: 40% !important; top: 58% !important; width: 26vw !important; }
+  #staticWorkModal { width: min(100vw - 20px, 600px); }
+  .static-modal-shell { grid-template-columns: 1fr; min-height: 0; }
+  .static-modal-art { max-height: 42vh; padding: 28px; }
+  .static-modal-art img { max-height: 36vh; }
+  .static-modal-info { min-height: 0; padding: 42px 28px 32px; }
+  .static-modal-title { margin-bottom: 28px; }
+  .static-modal-technique { margin-top: 38px; padding-top: 0; }
+}

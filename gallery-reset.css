@@ -1,0 +1,100 @@
+/* Stała, jednowidokowa plansza pięciu prac. */
+.gallery-page {
+  overflow: hidden;
+}
+
+.gallery-header .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.65rem !important;
+}
+
+.gallery-header .logo .plutchik-logo {
+  display: block !important;
+  width: 2.1rem !important;
+  height: 2.1rem !important;
+  flex: 0 0 auto !important;
+  object-fit: contain !important;
+}
+
+.gallery-header .logo .logo-title {
+  display: block !important;
+  line-height: 0.78;
+}
+
+#canvas {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  align-items: center !important;
+  justify-items: center !important;
+  width: 100% !important;
+  height: calc(100dvh - 5.4rem) !important;
+  min-height: 32rem !important;
+  margin: 0 !important;
+  padding: clamp(1.25rem, 3.2vw, 3.5rem) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  transform: none !important;
+  touch-action: auto !important;
+}
+
+#canvas > .work {
+  position: relative !important;
+  inset: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Wymiary obrazów wynikają wyłącznie z ich oryginalnych proporcji. */
+#canvas > .work img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: calc(100dvh - 10.5rem) !important;
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+  transform: none !important;
+}
+
+#canvas > .work .work-index,
+#canvas > .work .work-label {
+  display: none !important;
+}
+
+/* Każda praca otwiera wyłącznie własne okno — bez karuzeli. */
+#workModal .modal-work button,
+#workModal .modal-work [class*="nav"],
+#workModal .modal-work [class*="dot"] {
+  display: none !important;
+}
+
+#modalKicker {
+  margin: 0 0 1.25rem;
+}
+
+@media (max-width: 700px) {
+  #canvas {
+    min-height: 27rem !important;
+    padding: 1rem 0.65rem !important;
+  }
+
+  #canvas > .work img {
+    max-height: calc(100dvh - 9rem) !important;
+  }
+}

@@ -9,7 +9,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
+  <style>
+    .gallery-header .logo {
+      display: grid;
+      grid-template-columns: 1.85rem auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      column-gap: 0.38rem;
+      row-gap: 0;
+    }
+
+    .gallery-header .logo::before {
+      content: "";
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      display: block;
+      width: 1.85rem;
+      aspect-ratio: 1;
+      background: url("assets/plutchik-smutek.png") center / contain no-repeat;
+    }
+
+    .gallery-header .logo > span {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .gallery-header .logo > em {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    @media (max-width: 680px) {
+      .gallery-header .logo {
+        grid-template-columns: 1.55rem auto;
+        column-gap: 0.3rem;
+      }
+
+      .gallery-header .logo::before {
+        width: 1.55rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="final-overrides.css">
+  <script defer src="final-overrides.js"></script>
+  <link rel="stylesheet" href="board-final.css">
+  <script defer src="board-final.js"></script>
+  <link rel="stylesheet" href="gallery-fixes.css">
+  <link rel="stylesheet" href="gallery-reset.css">
+</head>
   <body class="gallery-page" data-title-pl="chmury emocji — start" data-title-en="emotional clouds — start">
     <header class="gallery-header"><a class="logo" href="index.html">chmury<br /><em>emocji</em></a><nav><a class="active" href="index.html" data-i18n="nav-start">start</a><a href="o-projekcie.html" data-i18n="nav-about">o projekcie</a><a href="proces.html" data-i18n="nav-process">proces</a><a href="o-mnie.html" data-i18n="nav-me">o mnie</a></nav><div class="language-switch" aria-label="Wybór języka"><button type="button" data-lang="pl">PL</button><span>/</span><button type="button" data-lang="en">EN</button></div></header>
     <main class="gallery-main">
@@ -21,18 +68,90 @@
           <button class="work w03" data-work="3" style="--x:1140px;--y:550px;--w:180px;--h:260px"><img src="public/assets/works/03.png" alt="Grafika 3" /><span>03</span></button>
           <button class="work w04" data-work="4" style="--x:1380px;--y:370px;--w:119px;--h:168px"><img src="public/assets/works/04.png" alt="Grafika 4" /><span>04</span></button>
           <button class="work w05" data-work="5" style="--x:1510px;--y:590px;--w:119px;--h:168px"><img src="public/assets/works/05.png" alt="Grafika 5" /><span>05</span></button>
-          <button class="work w12" data-work="12" style="--x:690px;--y:1240px;--w:280px;--h:396px"><img src="public/assets/works/12.png" alt="Grafika 12" /><span>12</span></button>
-          <button class="work w13" data-work="13" style="--x:1040px;--y:1400px;--w:180px;--h:254px"><img src="public/assets/works/13.png" alt="Grafika 13" /><span>13</span></button>
-          <button class="work w14" data-work="14" style="--x:1300px;--y:1230px;--w:100px;--h:141px"><img src="public/assets/works/14.png" alt="Grafika 14" /><span>14</span></button>
-          <button class="work w15" data-work="15" style="--x:1480px;--y:1460px;--w:84px;--h:119px"><img src="public/assets/works/15.png" alt="Grafika 15" /><span>15</span></button>
-          <button class="work w16" data-work="16" style="--x:1640px;--y:1220px;--w:104px;--h:144px"><img src="public/assets/works/16.png" alt="Grafika 16" /><span>16</span></button>
-          <button class="work w17" data-work="17" style="--x:1830px;--y:1390px;--w:180px;--h:260px"><img src="public/assets/works/17.png" alt="Grafika 17" /><span>17</span></button>
-          <button class="work w18" data-work="18" style="--x:2080px;--y:1190px;--w:180px;--h:260px"><img src="public/assets/works/18.png" alt="Grafika 18" /><span>18</span></button>
         </div>
       </section>
     </main>
     <dialog class="work-modal" id="workModal"><button class="modal-close" aria-label="Zamknij" data-i18n-aria="close">×</button><div class="modal-work"><img id="modalImage" src="" alt="" /><div class="modal-pager"><button id="previousWork" aria-label="Poprzednia praca">‹</button><span id="pageDots"></span><button id="nextWork" aria-label="Następna praca">›</button></div></div><div class="modal-info"><p id="modalNumber" class="mono">grafika 01 / 18</p><h1 id="modalTitle" data-i18n="modal-artwork">Grafika</h1><div class="modal-description"><p id="modalText" data-i18n="modal-text">Opis pracy do uzupełnienia.</p><p id="modalDetails" data-i18n="modal-details"></p></div><p class="modal-technique" id="modalTechnique" data-i18n="modal-technique"></p></div></dialog>
     <script src="language.js"></script>
     <script src="script.js"></script>
-  </body>
+  <style>
+    /* Stały, widoczny od razu układ pięciu prac na tablicy — sprawdzony. */
+    #canvas {
+      position: relative !important;
+      transform: none !important;
+      width: 100% !important;
+      height: calc(100vh - 5.4rem) !important;
+      min-height: 42rem;
+      overflow: hidden !important;
+      touch-action: auto !important;
+    }
+
+    #canvas .work {
+      position: absolute !important;
+      display: block !important;
+      max-width: none !important;
+      transform: none !important;
+      pointer-events: auto !important;
+      cursor: pointer !important;
+      z-index: 2;
+    }
+
+    #canvas .work img {
+      pointer-events: none;
+    }
+
+    #canvas .w01 { left: 6% !important; top: 18% !important; width: clamp(9.5rem, 15vw, 13.5rem) !important; }
+    #canvas .w02 { left: 27% !important; top: 27% !important; width: clamp(10rem, 16vw, 14rem) !important; }
+    #canvas .w03 { left: 48% !important; top: 42% !important; width: clamp(8rem, 12vw, 11rem) !important; }
+    #canvas .w04 { left: 66% !important; top: 14% !important; width: clamp(9rem, 14vw, 12.5rem) !important; }
+    #canvas .w05 { left: 82% !important; top: 39% !important; width: clamp(8rem, 11vw, 10rem) !important; }
+
+    @media (max-width: 800px) {
+      #canvas {
+        height: calc(100vh - 4.6rem) !important;
+        min-height: 35rem;
+      }
+
+      #canvas .w01 { left: 6% !important; top: 13% !important; width: 24% !important; }
+      #canvas .w02 { left: 38% !important; top: 12% !important; width: 24% !important; }
+      #canvas .w03 { left: 70% !important; top: 16% !important; width: 20% !important; }
+      #canvas .w04 { left: 18% !important; top: 53% !important; width: 22% !important; }
+      #canvas .w05 { left: 58% !important; top: 52% !important; width: 23% !important; }
+    }
+  </style>
+
+  <script>
+    (() => {
+      const applyThirdWorkDescription = () => {
+        const language = new URLSearchParams(window.location.search).get('lang') === 'en' ? 'en' : 'pl';
+        const copy = language === 'en'
+          ? {
+              text: 'An attempt to escape a difficult emotional state, alongside a lack of belief in one’s own agency.',
+              details: 'Let it go? I feel I have to free myself.',
+              technique: 'Technique: digital graphics, print on Plexiglas.'
+            }
+          : {
+              text: 'Próba ucieczki z trudnego stanu emocjonalnego, jednoczesny brak wiary we własną sprawczość.',
+              details: 'Odpuścić? Czuję, że muszę się uwolnić.',
+              technique: 'Technika: grafika cyfrowa, druk na pleksi.'
+            };
+
+        const text = document.getElementById('modalText');
+        const details = document.getElementById('modalDetails');
+        const technique = document.getElementById('modalTechnique');
+        if (text) text.textContent = copy.text;
+        if (details) details.textContent = copy.details;
+        if (technique) technique.textContent = copy.technique;
+      };
+
+      const thirdWork = document.querySelector('#canvas .work.w03');
+      if (thirdWork) {
+        thirdWork.addEventListener('click', () => window.setTimeout(applyThirdWorkDescription, 0));
+      }
+    })();
+  </script>
+  <script src="site-overrides.js"></script>
+  <script src="gallery-fixes.js"></script>
+  <script src="gallery-reset.js"></script>
+</body>
 </html>

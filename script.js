@@ -1,17 +1,14 @@
-const viewport = document.querySelector('#viewport');
 const canvas = document.querySelector('#canvas');
 const modal = document.querySelector('#workModal');
 const image = document.querySelector('#modalImage');
 let position = { x: -1180, y: -240 };
-let dragStart = null;
-let dragging = false;
 let activeWork = 1;
 
 if (window.innerWidth <= 700) {
   position = { x: -1300, y: -390 };
 }
 
-const visibleWorkNumbers = [1, 2, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18];
+const visibleWorkNumbers = [1, 2, 3, 4, 5];
 const works = visibleWorkNumbers.map(number => ({
   number,
   image: `public/assets/works/${String(number).padStart(2, '0')}.png`,
@@ -23,32 +20,6 @@ function renderCanvas() {
 }
 
 renderCanvas();
-
-viewport.addEventListener('pointerdown', event => {
-  if (event.target.closest('.work')) return;
-  dragStart = { x: event.clientX - position.x, y: event.clientY - position.y, moved: false };
-  viewport.setPointerCapture(event.pointerId);
-});
-viewport.addEventListener('pointermove', event => {
-  if (!dragStart) return;
-  const nextX = event.clientX - dragStart.x;
-  const nextY = event.clientY - dragStart.y;
-  if (Math.abs(nextX - position.x) > 4 || Math.abs(nextY - position.y) > 4) dragStart.moved = true;
-  position = { x: nextX, y: nextY };
-  dragging = dragStart.moved;
-  viewport.classList.toggle('dragging', dragging);
-  renderCanvas();
-});
-viewport.addEventListener('pointerup', () => {
-  window.setTimeout(() => { dragging = false; viewport.classList.remove('dragging'); }, 0);
-  dragStart = null;
-});
-viewport.addEventListener('wheel', event => {
-  event.preventDefault();
-  position.x -= event.deltaX;
-  position.y -= event.deltaY;
-  renderCanvas();
-}, { passive: false });
 
 function openWork(number) {
   const work = works.find(item => item.number === number);

@@ -1,0 +1,108 @@
+/* Final layout pass for the fixed five-work board. */
+:root {
+  --board-header-height: 86px;
+}
+
+body.gallery-page {
+  overflow: hidden !important;
+}
+
+.gallery-header .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 9px !important;
+  white-space: nowrap !important;
+}
+
+.gallery-header .logo .plutchik-icon {
+  display: block !important;
+  position: static !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  flex: 0 0 42px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: contrast(1.45) saturate(1.1) !important;
+}
+
+#canvas {
+  position: relative !important;
+  width: 100% !important;
+  height: calc(100vh - var(--board-header-height)) !important;
+  min-height: 590px !important;
+  overflow: hidden !important;
+  transform: none !important;
+  cursor: default !important;
+  touch-action: none !important;
+}
+
+#canvas .work {
+  position: absolute !important;
+  display: block !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border: 0 !important;
+  transform: none !important;
+  animation: none !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+#canvas .work img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+#canvas .work:not(.w01):not(.w02):not(.w03):not(.w04):not(.w05) {
+  display: none !important;
+}
+
+#canvas .w01 { left: 4% !important; top: 19% !important; width: 13.4% !important; z-index: 2 !important; }
+#canvas .w02 { left: 22.3% !important; top: 15% !important; width: 18.8% !important; z-index: 3 !important; }
+#canvas .w03 { left: 49.2% !important; top: 37% !important; width: 13.4% !important; z-index: 2 !important; }
+#canvas .w04 { left: 67.2% !important; top: 15% !important; width: 10.8% !important; z-index: 3 !important; }
+#canvas .w05 { left: 82.8% !important; top: 28% !important; width: 11.8% !important; z-index: 2 !important; }
+
+#workModal .work-nav,
+#workModal .modal-nav,
+#workModal .prev,
+#workModal .next,
+#workModal [data-direction] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  :root { --board-header-height: 76px; }
+
+  #canvas {
+    min-height: 610px !important;
+  }
+
+  .gallery-header .logo .plutchik-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  #canvas .w01 { left: 3.5% !important; top: 11% !important; width: 17% !important; }
+  #canvas .w02 { left: 21% !important; top: 22% !important; width: 23% !important; }
+  #canvas .w03 { left: 47% !important; top: 54% !important; width: 18% !important; }
+  #canvas .w04 { left: 66% !important; top: 13% !important; width: 15% !important; }
+  #canvas .w05 { left: 80% !important; top: 35% !important; width: 16% !important; }
+}

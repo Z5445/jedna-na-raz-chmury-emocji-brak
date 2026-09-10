@@ -1,0 +1,159 @@
+/* Finalna, nieruchoma prezentacja pięciu wybranych prac. */
+body.gallery-page {
+  overflow: hidden !important;
+}
+
+.gallery-page .gallery-header {
+  position: relative;
+  z-index: 1000;
+  isolation: isolate;
+}
+
+.gallery-page .gallery-header .logo.final-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  text-decoration: none !important;
+}
+
+.gallery-page .gallery-header .logo.final-logo::before,
+.gallery-page .gallery-header .logo.final-logo::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.gallery-page .gallery-header .logo.final-logo .header-plutchik {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  flex: 0 0 auto !important;
+}
+
+.gallery-page .gallery-header .logo.final-logo .final-logo-title {
+  display: block !important;
+  color: #151515 !important;
+  font: 700 1rem/0.76 Arial, sans-serif !important;
+  letter-spacing: -0.045em;
+}
+
+.gallery-page .gallery-header .logo.final-logo .final-logo-title em {
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.gallery-page .gallery-header > .plutchik-icon,
+.gallery-page .gallery-header > img[src*="plutchik"],
+.gallery-page .gallery-header .logo ~ img[src*="plutchik"],
+.gallery-page .gallery-header .extra-plutchik {
+  display: none !important;
+}
+
+.gallery-page #canvas.static-canvas {
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  grid-template-rows: minmax(0, 1fr) !important;
+  align-items: center !important;
+  justify-items: center !important;
+  gap: clamp(0.45rem, 1.15vw, 1.25rem) !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: calc(100dvh - 6rem) !important;
+  min-height: 0 !important;
+  padding: clamp(0.7rem, 2vw, 1.7rem) !important;
+  overflow: hidden !important;
+  cursor: default !important;
+  touch-action: auto !important;
+}
+
+.gallery-page #canvas.static-canvas .work {
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  animation: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  z-index: auto !important;
+}
+
+.gallery-page #canvas.static-canvas .work::before,
+.gallery-page #canvas.static-canvas .work::after {
+  display: none !important;
+}
+
+.gallery-page #canvas.static-canvas .work img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+#workModal .modal-work > *:not(img):not(#modalImage),
+#workModal .modal-work .modal-navigation,
+#workModal .modal-work [class*="nav"],
+#workModal .modal-work [class*="pager"],
+#workModal .modal-work [class*="dots"] {
+  display: none !important;
+}
+
+#workModal .modal-close-final {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.45rem;
+  z-index: 20;
+  appearance: none;
+  border: 0;
+  padding: 0.15rem;
+  background: transparent;
+  color: #161616;
+  font: 400 2rem/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+#workModal [hidden] {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .gallery-page #canvas.static-canvas {
+    gap: 0.28rem !important;
+    padding: 0.45rem !important;
+  }
+
+  .gallery-page .gallery-header .logo.final-logo .header-plutchik {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+}

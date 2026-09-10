@@ -1,0 +1,104 @@
+/* Final layout refinements for the five-work interactive board. */
+:root {
+  --board-header-height: 86px;
+}
+
+.gallery-header .logo,
+header .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  white-space: nowrap !important;
+}
+
+.gallery-header .logo .plutchik-icon,
+header .logo .plutchik-icon {
+  display: block !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+body.gallery-page {
+  overflow: hidden !important;
+}
+
+body.gallery-page #canvas {
+  position: relative !important;
+  width: 100% !important;
+  height: calc(100vh - var(--board-header-height)) !important;
+  min-height: 560px !important;
+  overflow: hidden !important;
+  transform: none !important;
+  translate: none !important;
+  touch-action: none !important;
+  cursor: default !important;
+}
+
+body.gallery-page #canvas .work {
+  position: absolute !important;
+  display: block !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+body.gallery-page #canvas .work img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  aspect-ratio: auto !important;
+}
+
+body.gallery-page #canvas .work:not(.w01):not(.w02):not(.w03):not(.w04):not(.w05) {
+  display: none !important;
+}
+
+/* The widths are deliberate: images retain their original file proportions. */
+body.gallery-page #canvas .work.w01 { left: 4% !important; top: 20% !important; width: 13.2% !important; }
+body.gallery-page #canvas .work.w02 { left: 23% !important; top: 18% !important; width: 18.5% !important; }
+body.gallery-page #canvas .work.w03 { left: 51% !important; top: 34% !important; width: 11.8% !important; }
+body.gallery-page #canvas .work.w04 { left: 67% !important; top: 15% !important; width: 10.6% !important; }
+body.gallery-page #canvas .work.w05 { left: 83% !important; top: 27% !important; width: 11.7% !important; }
+
+/* A work can only be opened directly; modal navigation is intentionally absent. */
+#workModal .modal-nav,
+#workModal .modal-pagination,
+#workModal .slider-controls,
+#workModal [data-direction],
+#workModal [data-slide] {
+  display: none !important;
+}
+
+@media (max-width: 820px) {
+  :root {
+    --board-header-height: 72px;
+  }
+
+  body.gallery-page #canvas {
+    min-height: calc(100svh - var(--board-header-height)) !important;
+  }
+
+  body.gallery-page #canvas .work.w01 { left: 3% !important; top: 24% !important; width: 18% !important; }
+  body.gallery-page #canvas .work.w02 { left: 22% !important; top: 19% !important; width: 24% !important; }
+  body.gallery-page #canvas .work.w03 { left: 51% !important; top: 39% !important; width: 16% !important; }
+  body.gallery-page #canvas .work.w04 { left: 68% !important; top: 19% !important; width: 14% !important; }
+  body.gallery-page #canvas .work.w05 { left: 84% !important; top: 31% !important; width: 13% !important; }
+}

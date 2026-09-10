@@ -96,15 +96,11 @@ button { font: inherit; }
 
 .viewport {
   background: linear-gradient(120deg, #fcfcfc, #f4f4f2);
-  cursor: grab;
   height: 100%;
   overflow: hidden;
   position: relative;
-  touch-action: none;
   width: 100%;
 }
-
-.viewport.dragging { cursor: grabbing; }
 
 .canvas {
   background-image: linear-gradient(#1111110e 1px, transparent 1px), linear-gradient(90deg, #1111110e 1px, transparent 1px);
@@ -267,12 +263,13 @@ button { font: inherit; }
 .process-list li { border-top: 1px solid var(--line); display: grid; gap: 30px; grid-template-columns: 42px 1fr; padding: 20px 0; }
 .process-list > li > span { color: var(--blue); font: 10px 'DM Mono', monospace; padding-top: 6px; }
 .process-list h2 { font-size: 20px; font-weight: 500; margin: 0 0 8px; }
-.process-list p { font-size: 15px; line-height: 1.5; margin: 0; max-width: 480px; }
+.process-list p { font-size: 15px; line-height: 1.5; margin: 0; max-width: 480px; text-wrap: pretty; }
 
 .about-page { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100svh - 76px); }
-.portrait-placeholder { align-items: center; background: #f0f0ed; display: flex; justify-content: center; text-align: center; }
+.portrait-placeholder { align-items: center; background: #f0f0ed; display: flex; justify-content: center; padding: 40px; text-align: center; }
+.portrait-placeholder img { aspect-ratio: 1; display: block; object-fit: cover; object-position: center; width: min(28vw, 340px); }
 .about-copy { padding: 11vw 14%; }
-.about-copy > p:not(.statement) { font-size: 16px; line-height: 1.6; max-width: 470px; }
+.about-copy > p:not(.statement) { font-size: 16px; line-height: 1.6; max-width: 470px; text-wrap: pretty; }
 .statement { font: italic 24px/1.35 'Playfair Display', Georgia, serif; margin-top: 36px; max-width: 450px; }
 
 .contact-link {
@@ -316,5 +313,6 @@ button { font: inherit; }
   .process-list li { gap: 14px; grid-template-columns: 35px 1fr; }
   .about-page { grid-template-columns: 1fr; }
   .portrait-placeholder { min-height: 430px; }
+  .portrait-placeholder img { width: min(68vw, 340px); }
   .about-copy { padding: 20vw 8vw; }
 }
