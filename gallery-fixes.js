@@ -7,24 +7,24 @@
     const language = new URLSearchParams(window.location.search).get('lang') === 'en' ? 'en' : 'pl';
     const works = {
       w01: {
-        pl: { label: 'Grafika 10/14', title: 'Grafika 10', description: 'Złość niekontrolowana i niehamowana, nagły wybuch ze skrywanych emocji.', source: 'Źródło: anonimowy list umieszczony w internecie', technique: 'Technika: grafika cyfrowa, druk na pleksi.' },
-        en: { label: 'Work 10/14', title: 'Work 10', description: 'Uncontrolled, unrestrained anger — a sudden outburst of concealed emotions.', source: 'Source: anonymous letter published online.', technique: 'Technique: digital graphics, print on plexiglass.' }
+        pl: { label: 'Grafika 10/14', title: 'Grafika 10', description: 'Złość niekontrolowana i niehamowana, nagły wybuch ze skrywanych emocji.', source: 'Źródło tekstu: anonimowy list umieszczony w internecie', technique: 'Technika: grafika cyfrowa, druk na pleksi.' },
+        en: { label: 'Work 10/14', title: 'Work 10', description: 'Uncontrolled, unrestrained anger — a sudden outburst of concealed emotions.', source: 'Text source: anonymous letter published online.', technique: 'Technique: digital graphics, print on plexiglass.' }
       },
       w02: {
-        pl: { label: 'Grafika 13/14', title: 'Grafika 13', description: 'Piękno świata zewnętrznego pozostaje w cieniu w obliczu wewnętrznej straty.', source: 'Źródło: książka „Norwegian Wood”, Haruki Murakami, tłum. Jay Rubin', technique: 'Technika: mieszana; fotografia, grafika cyfrowa, druk na pleksi.' },
-        en: { label: 'Work 13/14', title: 'Work 13', description: 'The beauty of the outside world remains in shadow in the face of inner loss.', source: 'Source: Haruki Murakami, Norwegian Wood, trans. Jay Rubin.', technique: 'Technique: mixed media; photography, digital graphics, print on plexiglass.' }
+        pl: { label: 'Grafika 13/14', title: 'Grafika 13', description: 'Piękno świata zewnętrznego pozostaje w cieniu w obliczu wewnętrznej straty.', source: 'Źródło tekstu: książka „Norwegian Wood”, Haruki Murakami, tłum. Jay Rubin', technique: 'Technika: mieszana; fotografia, grafika cyfrowa, druk na pleksi.' },
+        en: { label: 'Work 13/14', title: 'Work 13', description: 'The beauty of the outside world remains in shadow in the face of inner loss.', source: 'Text source: the novel “Norwegian Wood” by Haruki Murakami, translated by Jay Rubin', technique: 'Technique: mixed media; photography, digital graphics, print on plexiglass.' }
       },
       w03: {
-        pl: { label: 'Grafika 5/14', title: 'Grafika 5', description: 'Próba ucieczki z trudnego stanu emocjonalnego, jednoczesny brak wiary we własną sprawczość.', source: '„Odpuścić? Czuję, że muszę się uwolnić”', technique: 'Technika: grafika cyfrowa, druk na pleksi.' },
-        en: { label: 'Work 5/14', title: 'Work 5', description: 'An attempt to escape a difficult emotional state, accompanied by a lack of faith in one’s own agency.', source: '“Let go? I feel that I have to free myself.”', technique: 'Technique: digital graphics, print on plexiglass.' }
+        pl: { label: 'Grafika 5/14', title: 'Grafika 5', description: 'Próba ucieczki z trudnego stanu emocjonalnego, jednoczesny brak wiary we własną sprawczość.', source: '', technique: 'Technika: grafika cyfrowa, druk na pleksi.' },
+        en: { label: 'Work 5/14', title: 'Work 5', description: 'An attempt to escape a difficult emotional state, accompanied by a lack of faith in one’s own agency.', source: '', technique: 'Technique: digital graphics, print on plexiglass.' }
       },
       w04: {
-        pl: { label: 'Grafika 4/14', title: 'Grafika 4', description: 'Natrętna myśl zajmuje miejsce wyobraźni, zajmuje cały umysł.', source: '', technique: 'Technika: mieszana; długopis, marker piórkowy, grafika cyfrowa, druk na pleksi.' },
-        en: { label: 'Work 4/14', title: 'Work 4', description: 'An intrusive thought takes the place of imagination; it occupies the whole mind.', source: '', technique: 'Technique: mixed media; ballpoint pen, fountain marker, digital graphics, print on plexiglass.' }
+        pl: { label: 'Grafika 4/14', title: 'Grafika 4', description: 'Natrętna myśl zajmuje miejsce wyobraźni, zajmuje cały umysł.', source: 'Źródło tekstu: utwór Fleetwood Mac – Silver Springs', technique: 'Technika: mieszana; długopis, marker piórkowy, grafika cyfrowa, druk na pleksi.' },
+        en: { label: 'Work 4/14', title: 'Work 4', description: 'An intrusive thought takes the place of imagination; it occupies the whole mind.', source: 'Text source: Fleetwood Mac — Silver Springs', technique: 'Technique: mixed media; ballpoint pen, fountain marker, digital graphics, print on plexiglass.' }
       },
       w05: {
-        pl: { label: 'Grafika 14/14', title: 'Grafika 14', description: 'Odnalezienie ukojenia w sztuce. Poczucie uwolnienia z odosobnienia.', source: '', technique: 'Technika: mieszana; monotypia, marker, grafika cyfrowa, druk na pleksi.' },
-        en: { label: 'Work 14/14', title: 'Work 14', description: 'Finding solace in art. A sense of release from isolation.', source: '', technique: 'Technique: mixed media; monotype, marker, digital graphics, print on plexiglass.' }
+        pl: { label: 'Grafika 14/14', title: 'Grafika 14', description: 'Odnalezienie ukojenia w sztuce. Poczucie uwolnienia z odosobnienia.', source: 'Źródło tekstu: Rozmowa z AI na temat średniowiecznego utworu "Roman de Flamenca"', technique: 'Technika: mieszana; monotypia, marker, grafika cyfrowa, druk na pleksi.' },
+        en: { label: 'Work 14/14', title: 'Work 14', description: 'Finding solace in art. A sense of release from isolation.', source: 'Text source: a conversation with AI about the medieval work “Roman de Flamenca”', technique: 'Technique: mixed media; monotype, marker, digital graphics, print on plexiglass.' }
       }
     };
 

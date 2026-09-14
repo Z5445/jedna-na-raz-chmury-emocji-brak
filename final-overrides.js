@@ -5,14 +5,14 @@
         title: 'Grafika 10',
         kicker: 'GRAFIKA 10 / 14',
         text: 'Złość niekontrolowana i niehamowana, nagły wybuch ze skrywanych emocji.',
-        details: 'Źródło: anonimowy list umieszczony w internecie.',
+        details: 'Źródło tekstu: anonimowy list umieszczony w internecie.',
         technique: 'Technika: grafika cyfrowa, druk na pleksi.'
       },
       en: {
         title: 'Artwork 10',
         kicker: 'ARTWORK 10 / 14',
         text: 'Uncontrolled, unrestrained anger: a sudden outburst of suppressed emotions.',
-        details: 'Source: an anonymous letter published online.',
+        details: 'Text source: an anonymous letter published online.',
         technique: 'Technique: digital graphics, print on plexiglass.'
       }
     },
@@ -21,14 +21,14 @@
         title: 'Grafika 13',
         kicker: 'GRAFIKA 13 / 14',
         text: 'Piękno świata zewnętrznego pozostaje w cieniu w obliczu wewnętrznej straty.',
-        details: 'Źródło: książka „Norwegian Wood”, Haruki Murakami, tłum. Jay Rubin.',
+        details: 'Źródło tekstu: książka „Norwegian Wood”, Haruki Murakami, tłum. Jay Rubin',
         technique: 'Technika: mieszana; fotografia, grafika cyfrowa, druk na pleksi.'
       },
       en: {
         title: 'Artwork 13',
         kicker: 'ARTWORK 13 / 14',
         text: 'The beauty of the outside world remains in shadow in the face of inner loss.',
-        details: 'Source: Haruki Murakami, Norwegian Wood, translated by Jay Rubin.',
+        details: 'Text source: the novel “Norwegian Wood” by Haruki Murakami, translated by Jay Rubin',
         technique: 'Technique: mixed media; photography, digital graphics, print on plexiglass.'
       }
     },
@@ -37,14 +37,14 @@
         title: 'Grafika 5',
         kicker: 'GRAFIKA 5 / 14',
         text: 'Próba ucieczki z trudnego stanu emocjonalnego, jednoczesny brak wiary we własną sprawczość.',
-        details: 'Odpuścić? Czuję, że muszę się uwolnić.',
+        details: '',
         technique: 'Technika: grafika cyfrowa, druk na pleksi.'
       },
       en: {
         title: 'Artwork 5',
         kicker: 'ARTWORK 5 / 14',
         text: 'An attempt to escape a difficult emotional state, alongside a lack of faith in one’s own agency.',
-        details: 'Let go? I feel that I need to free myself.',
+        details: '',
         technique: 'Technique: digital graphics, print on plexiglass.'
       }
     },
@@ -53,14 +53,14 @@
         title: 'Grafika 4',
         kicker: 'GRAFIKA 4 / 14',
         text: 'Natrętna myśl zajmuje miejsce wyobraźni, zajmuje cały umysł.',
-        details: '',
+        details: 'Źródło tekstu: utwór Fleetwood Mac – Silver Springs',
         technique: 'Technika: mieszana; długopis, marker piórkowy, grafika cyfrowa, druk na pleksi.'
       },
       en: {
         title: 'Artwork 4',
         kicker: 'ARTWORK 4 / 14',
         text: 'An intrusive thought takes the place of imagination and occupies the entire mind.',
-        details: '',
+        details: 'Text source: Fleetwood Mac — Silver Springs',
         technique: 'Technique: mixed media; ballpoint pen, fountain marker, digital graphics, print on plexiglass.'
       }
     },
@@ -69,14 +69,14 @@
         title: 'Grafika 14',
         kicker: 'GRAFIKA 14 / 14',
         text: 'Odnalezienie ukojenia w sztuce. Poczucie uwolnienia z odosobnienia.',
-        details: '',
+        details: 'Źródło tekstu: Rozmowa z AI na temat średniowiecznego utworu "Roman de Flamenca"',
         technique: 'Technika: mieszana; monotypia, marker, grafika cyfrowa, druk na pleksi.'
       },
       en: {
         title: 'Artwork 14',
         kicker: 'ARTWORK 14 / 14',
         text: 'Finding solace in art. A sense of release from isolation.',
-        details: '',
+        details: 'Text source: a conversation with AI about the medieval work “Roman de Flamenca”',
         technique: 'Technique: mixed media; monotype, marker, digital graphics, print on plexiglass.'
       }
     }
